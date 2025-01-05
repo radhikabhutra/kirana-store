@@ -1,0 +1,6 @@
+export enum UserRole {
+  READ_ONLY = 'READ_ONLY',
+  READ_WRITE = 'READ_WRITE',
+  STORE_ADMIN = 'STORE_ADMIN',
+  SYSTEM_ADMIN = 'SYSTEM_ADMIN',
+}
