@@ -138,4 +138,3 @@ FX_RATES_ENDPOINT   | Currency rates API endpoint
 - Database indexing on frequently queried fields
 - Pagination for large data sets
 - Efficient lock management with automatic cleanup
-# kirana-store
