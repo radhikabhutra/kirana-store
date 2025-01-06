@@ -1,11 +1,11 @@
 # Kirana Store Management System
 
-A robust backend service designed to help Kirana stores (local retail shops) manage their transaction registers effectively. The system handles daily credit and debit transactions with multi-currency support, generates financial reports, and provides secure access control.
+A backend service designed to help Kirana stores (local retail shops) manage their transaction registers effectively. The system handles daily credit and debit transactions with multi-currency support, generates financial reports, and provides secure access control.
 
 ## 🚀 Features
 
 - Multi-currency transaction support with real-time currency conversion
-- Weekly, monthly, or custom date financial reporting
+- Weekly, monthly, or custom-date financial reporting
 - Role-based access control (STORE_ADMIN, READ_WRITE, READ_ONLY)
 - API rate limiting to prevent abuse
 - Currency conversion rate caching
@@ -61,22 +61,17 @@ The system is built around three main entities:
 
 #### Rate Limiting
 
-- Redis-based rate limiting for to prevent brute force
+- Redis-based rate limiting to prevent brute force
 
 #### Distributed Lock Mechanism
 
-The system implements a Redis-based distributed locking mechanism to handle concurrent operations safely. This is crucial for:
+The system implements a Redis-based distributed locking mechanism to handle concurrent operations safely.
 
-1. **Transaction Processing**
-
-   - Prevents race conditions during simultaneous transactions
-   - Maintains data consistency across distributed systems
-
-2. **Key Features**
-   - Automatic lock expiration (TTL)
-   - Retry mechanism with configurable attempts
-   - Dead-lock prevention
-   - Graceful lock release on process termination
+- Prevents race conditions during simultaneous transactions
+- Automatic lock expiration (TTL)
+- Retry mechanism with configurable attempts
+- Dead-lock prevention
+- Graceful lock release on process termination
 
 #### Financial Reporting
 
@@ -132,7 +127,7 @@ FX_RATES_ENDPOINT   | Currency rates API endpoint
 - Input validation and sanitization through DTOs
 - Distributed lock timeouts to prevent deadlocks
 
-### Performance Optimizations
+### ⚡ Performance Optimizations
 
 - Currency conversion rate caching
 - Database indexing on frequently queried fields
